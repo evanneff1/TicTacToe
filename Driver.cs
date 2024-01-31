@@ -38,7 +38,8 @@ do
    
     //Place marker and show updated board
     board[(int.Parse(player1) - 1)] = "X";
-    board.ToList().ForEach(x => Console.WriteLine(x));
+    //Support.PrintBoard(board)
+    //Support.CheckWinner(board)
 
     //Player 2 turn
     Console.WriteLine("Player 2 Turn");
@@ -53,8 +54,7 @@ do
 
     //Place marker and show updated board
     board[(int.Parse(player2) - 1)] = "O";
-    board.ToList().ForEach(x => Console.WriteLine(x));
+    //Support.PrintBoard(board)
+    //Support.CheckWinner(board)
 
-    //PrintBoard()
-    //CheckWinner()
 } while (!gameOver);
