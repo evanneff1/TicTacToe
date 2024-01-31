@@ -39,7 +39,7 @@ do
     //Place marker and show updated board
     board[(int.Parse(player1) - 1)] = "X";
     //Support.PrintBoard(board)
-    //Support.CheckWinner(board)
+    //Support.CheckWinner(board) = gamOver;
 
     //Player 2 turn
     Console.WriteLine("Player 2 Turn");
@@ -55,6 +55,6 @@ do
     //Place marker and show updated board
     board[(int.Parse(player2) - 1)] = "O";
     //Support.PrintBoard(board)
-    //Support.CheckWinner(board)
+    //Support.CheckWinner(board) = gamerOver;
 
 } while (!gameOver);
