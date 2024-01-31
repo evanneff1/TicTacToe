@@ -49,7 +49,7 @@ do
     //PrintBoard()
     //CheckWinner()
 
-
+    Console.WriteLine();
 
 
 
