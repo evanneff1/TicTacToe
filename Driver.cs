@@ -1,14 +1,12 @@
 ﻿using System.Data;
-using TicTacToe;
 
 //Instatiate other class
-Support support = new Support();
+Support Support = new Support();
 
 //Declare variables
 bool gameOver = false;
 string[] board = new string[9];
 bool valid = false;
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
 string[] validValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 //support.PrintBoard();
@@ -57,7 +55,7 @@ do
     board[(int.Parse(player1) - 1)] = "X";
     //board.ToList().ForEach(element => Console.Write(element));
     //Support.PrintBoard(board)
-    //Support.CheckWinner(board) = gamOver;
+    Console.WriteLine(Support.CheckWinner(board));
 
     //Player 2 turn
     Console.WriteLine("Player 2 Turn\nPlease enter the number of the position in which you would like to place your mark");
@@ -89,6 +87,6 @@ do
     board[(int.Parse(player2) - 1)] = "O";
     //board.ToList().ForEach(element => Console.Write(element));
     //Support.PrintBoard(board)
-    //Support.CheckWinner(board) = gamerOver;
+    Console.WriteLine(Support.CheckWinner(board));
 
 } while (!gameOver);
