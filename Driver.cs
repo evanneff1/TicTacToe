@@ -14,14 +14,14 @@ string[] validValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 //support.CheckWinner();
 
 //Welcome to game
-System.Console.WriteLine("Welcome to the Game!");
+System.Console.WriteLine("Welcome to the Game!\n\nHere is the game board layout");
 
 //Print board key
 System.Console.WriteLine("1 | 2 | 3");
 System.Console.WriteLine("----------");
 System.Console.WriteLine("4 | 5 | 6");
 System.Console.WriteLine("----------");
-System.Console.WriteLine("7 | 8 | 9");
+System.Console.WriteLine("7 | 8 | 9\n");
 
 //Play game loop
 do
