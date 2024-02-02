@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class TicTacToeSupport
+public class Support
 {
     public string CheckWinner(string[] board)
     {
@@ -30,7 +30,7 @@ public class TicTacToeSupport
                 board[winningCombinations[i, 1]] == board[winningCombinations[i, 2]])
             {
                 // Return the winner based on the value in the winning position
-                return board[winningCombinations[i, 0]] == "1" ? "Player 1 Wins" : "Player 2 Wins";
+                return board[winningCombinations[i, 0]] == "1" ? "Player 2 Wins" : "Player 1 Wins";
             }
         }
 
