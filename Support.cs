@@ -15,7 +15,7 @@ public class Support
             {
                 // board array
                 int index = row * size + col;
-                string value = string.IsNullOrEmpty(board[index]) ? (index + 1).ToString() : board[index];
+                string value = string.IsNullOrEmpty(board[index]) ? " " : board[index];
 
                 // Print the value 
                 Console.Write(value);
@@ -60,7 +60,7 @@ public class Support
                 board[winningCombinations[i, 1]] == board[winningCombinations[i, 2]])
             {
                 // Return the winner based on the value in the winning position
-                return board[winningCombinations[i, 0]] == "1" ? "Player 2 Wins" : "Player 1 Wins";
+                return board[winningCombinations[i, 0]] == "X" ? "Player 1 Wins" : "Player 2 Wins";
             }
         }
 
