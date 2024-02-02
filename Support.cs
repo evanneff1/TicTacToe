@@ -8,13 +8,7 @@ namespace TicTacToe
 {
     internal class Support
     {
-
-        public void boardDisplay() 
-        {
-            Console.WriteLine("Hello");
-        }
-
-        public string CheckForWinner(char[,] board)
+        public string CheckWinner(char[,] board)
         {
             // Check rows and columns
             for (int i = 0; i < 3; i++)
@@ -52,9 +46,5 @@ namespace TicTacToe
 
             return isDraw ? "Draw" : "None";
         }
-
-
-
-
     }
 }
