@@ -8,6 +8,7 @@ Support support = new Support();
 bool gameOver = false;
 string[] board = new string[9];
 bool valid = false;
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
 string[] validValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 //support.PrintBoard();
@@ -54,6 +55,7 @@ do
 
     //Place marker and show updated board
     board[(int.Parse(player1) - 1)] = "X";
+    //board.ToList().ForEach(element => Console.Write(element));
     //Support.PrintBoard(board)
     //Support.CheckWinner(board) = gamOver;
 
@@ -65,7 +67,7 @@ do
     //Check valid input
     while (valid == false)
     {
-        if (validValues.Contains(player2))
+        if (!validValues.Contains(player2))
         {
             Console.WriteLine("Invalid input. Please enter a valid number 1-9:");
             player2 = Console.ReadLine();
@@ -85,6 +87,7 @@ do
 
     //Place marker and show updated board
     board[(int.Parse(player2) - 1)] = "O";
+    //board.ToList().ForEach(element => Console.Write(element));
     //Support.PrintBoard(board)
     //Support.CheckWinner(board) = gamerOver;
 
