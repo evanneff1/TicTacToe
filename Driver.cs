@@ -7,6 +7,8 @@ Support support = new Support();
 //Declare variables
 bool gameOver = false;
 string[] board = new string[9];
+bool valid = false;
+string[] validValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 //support.PrintBoard();
 //support.CheckWinner();
@@ -25,31 +27,60 @@ System.Console.WriteLine("7 | 8 | 9");
 do
 {
     //Player one turn
-    Console.WriteLine("Player 1 Turn");
+    Console.WriteLine("Player 1 Turn\nPlease enter the number of the position in which you would like to place your mark");
     string player1 = Console.ReadLine();
+    valid = false;
 
     //Check for valid input
-    while (board[int.Parse(player1) - 1] == "X" || board[int.Parse(player1) - 1] == "O")
+    while (valid == false)
     {
-        Console.WriteLine("Spot is already taken. Please enter a new value: ");
-        player1 = Console.ReadLine();
+        if (!validValues.Contains(player1))
+        {
+            Console.WriteLine("Invalid input. Please enter a valid number 1-9:");
+            player1 = Console.ReadLine();
+        }
+        else if (board[int.Parse(player1) - 1] == "X" || board[int.Parse(player1) - 1] == "O")
+        {
+            Console.WriteLine("Spot is already taken. Please enter a new value:");
+            player1 = Console.ReadLine();
+        }
+        else
+        {
+            valid = true;
+        }
+
 
     };
-   
+
     //Place marker and show updated board
     board[(int.Parse(player1) - 1)] = "X";
     //Support.PrintBoard(board)
     //Support.CheckWinner(board) = gamOver;
 
     //Player 2 turn
-    Console.WriteLine("Player 2 Turn");
+    Console.WriteLine("Player 2 Turn\nPlease enter the number of the position in which you would like to place your mark");
     string player2 = Console.ReadLine();
+    valid = false;
 
     //Check valid input
-    while (board[int.Parse(player2) - 1] == "X" || board[int.Parse(player2) - 1] == "O")
+    while (valid == false)
     {
-        Console.WriteLine("Spot is already taken. Please enter a new value:");
-        player2 = Console.ReadLine();
+        if (validValues.Contains(player2))
+        {
+            Console.WriteLine("Invalid input. Please enter a valid number 1-9:");
+            player2 = Console.ReadLine();
+        }
+        else if (board[int.Parse(player2) - 1] == "X" || board[int.Parse(player2) - 1] == "O")
+        {
+            Console.WriteLine("Spot is already taken. Please enter a new value:");
+            player2 = Console.ReadLine();
+        }
+        else
+        {
+            valid = true;
+        }
+
+
     };
 
     //Place marker and show updated board
