@@ -6,7 +6,37 @@ using System.Threading.Tasks;
 
 public class Support
 {
-    public string CheckWinner(string[] board)
+    public void PrintBoard(string[] board)
+    {
+        int size = 3;
+        for (int row = 0; row < size; row++)
+        {
+            for (int col = 0; col < size; col++)
+            {
+                // board array
+                int index = row * size + col;
+                string value = string.IsNullOrEmpty(board[index]) ? (index + 1).ToString() : board[index];
+
+                // Print the value 
+                Console.Write(value);
+                if (col < size - 1)
+                {
+                    Console.Write(" | ");
+                }
+            }
+
+            // Row separator
+            if (row < size - 1)
+            {
+                Console.WriteLine("\n---------");
+            }
+            else
+            {
+                Console.WriteLine();
+            }
+        }
+    }
+        public string CheckWinner(string[] board)
     {
         // Define all winning combinations
         int[,] winningCombinations = new int[,]
